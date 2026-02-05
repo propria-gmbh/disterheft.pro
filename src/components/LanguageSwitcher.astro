@@ -1,0 +1,25 @@
+---
+const { currentPath, currentLang } = Astro.props;
+const languages = ["ru", "de", "en"];
+
+const pathParts = currentPath.split("/").filter(Boolean);
+const pathWithoutLang = languages.includes(pathParts[0])
+  ? pathParts.slice(1).join("/")
+  : pathParts.join("/");
+const suffix = pathWithoutLang ? `/${pathWithoutLang}` : "";
+
+const links = languages.map((lang) => ({
+  lang,
+  href: `/${lang}${suffix}`
+}));
+---
+<div class="language-switcher" aria-label="Language switcher">
+  {links.map((link, index) => (
+    <a
+      href={link.href}
+      class={link.lang === currentLang ? "active" : ""}
+    >
+      {link.lang.toUpperCase()}
+    </a>
+  ))}
+</div>

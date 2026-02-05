@@ -102,6 +102,29 @@ img {
   height: 36px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.language-switcher a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.language-switcher a.active {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
 .hero {
   background: var(--color-light);
 }
@@ -517,6 +540,10 @@ img {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 12px;
+  }
+
+  .header-actions {
+    justify-content: center;
   }
 
   .main-nav ul {
