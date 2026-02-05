@@ -1,8 +1,20 @@
 ---
+import { withBase } from "../scripts/withBase.js";
+
 const { currentPath, currentLang } = Astro.props;
 const languages = ["ru", "de", "en"];
 
-const pathParts = currentPath.split("/").filter(Boolean);
+const base = import.meta.env.BASE_URL || "/";
+const baseTrimmed = base.endsWith("/") ? base.slice(0, -1) : base;
+let normalizedPath = currentPath || "/";
+if (baseTrimmed && normalizedPath.startsWith(baseTrimmed)) {
+  normalizedPath = normalizedPath.slice(baseTrimmed.length);
+  if (!normalizedPath.startsWith("/")) {
+    normalizedPath = `/${normalizedPath}`;
+  }
+}
+
+const pathParts = normalizedPath.split("/").filter(Boolean);
 const pathWithoutLang = languages.includes(pathParts[0])
   ? pathParts.slice(1).join("/")
   : pathParts.join("/");
@@ -10,7 +22,7 @@ const suffix = pathWithoutLang ? `/${pathWithoutLang}` : "";
 
 const links = languages.map((lang) => ({
   lang,
-  href: `/${lang}${suffix}`
+  href: withBase(`/${lang}${suffix}`)
 }));
 ---
 <div class="language-switcher" aria-label="Language switcher">

@@ -1,4 +1,6 @@
 ---
+import { withBase } from "../scripts/withBase.js";
+
 const { impressumHref, privacyHref, copyright, whatsappHref, instagramHref } = Astro.props;
 const whatsappIcon = "https://static.wixstatic.com/media/11062b_58f2c990f64a47e48331c7d501bcf242~mv2.png/v1/fill/w_20,h_20,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_58f2c990f64a47e48331c7d501bcf242~mv2.png";
 const instagramIcon = "https://static.wixstatic.com/media/11062b_084cbbff6ae446c1b03dc3637193e77a~mv2.png/v1/fill/w_20,h_20,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_084cbbff6ae446c1b03dc3637193e77a~mv2.png";
@@ -6,8 +8,8 @@ const instagramIcon = "https://static.wixstatic.com/media/11062b_084cbbff6ae446c
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-links">
-      <a href={impressumHref}>Impressum und</a>
-      <a href={privacyHref}>Datenschutzerklärung</a>
+      <a href={withBase(impressumHref)}>Impressum und</a>
+      <a href={withBase(privacyHref)}>Datenschutzerklärung</a>
     </div>
     <div class="footer-social">
       <a href={whatsappHref} aria-label="Whatsapp">

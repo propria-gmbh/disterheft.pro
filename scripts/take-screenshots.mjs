@@ -2,7 +2,8 @@ import { chromium } from "playwright";
 import { mkdir } from "node:fs/promises";
 import { resolve } from "node:path";
 
-const baseUrl = "http://localhost:4173";
+const basePath = (process.env.BASE_PATH || "").replace(/\/$/, "");
+const baseUrl = `http://localhost:4173${basePath}`;
 const outputDir = resolve("audit/screenshots");
 
 const routes = [

@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { withBase } from "../scripts/withBase.js";
 
 const { brand, nav, instagramUrl, currentPath, currentLang } = Astro.props;
 const instagramIcon = "https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/01c3aff52f2a4dffa526d7a9843d46ea.png";
@@ -10,7 +11,7 @@ const instagramIcon = "https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7
     <nav class="main-nav" aria-label="Website">
       <ul>
         {nav.map((item) => (
-          <li><a href={item.href}>{item.label}</a></li>
+          <li><a href={withBase(item.href)}>{item.label}</a></li>
         ))}
       </ul>
     </nav>

@@ -1,11 +1,12 @@
 ---
 import { consentText } from "./consentText.js";
+import { withBase } from "../scripts/withBase.js";
 
 const { lang = "en" } = Astro.props;
 const copy = consentText[lang] ?? consentText.en;
-const privacyHref = `/${lang}/privacy-policy`;
-const impressumHref = `/${lang}/impressum`;
-const moreHref = `/${lang}/privacy-policy`;
+const privacyHref = withBase(`/${lang}/privacy-policy`);
+const impressumHref = withBase(`/${lang}/impressum`);
+const moreHref = withBase(`/${lang}/privacy-policy`);
 ---
 <div id="consent-banner" class="consent-banner" hidden>
   <div class="consent-container">
