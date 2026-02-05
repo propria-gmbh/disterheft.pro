@@ -1,0 +1,16 @@
+{
+  "name": "disterheft-site-mirror",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "latest"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.1"
+  }
+}

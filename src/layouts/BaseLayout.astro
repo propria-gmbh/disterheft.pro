@@ -1,0 +1,26 @@
+---
+import ConsentBanner from "../consent/ConsentBanner.astro";
+import consentManager from "../consent/consentManager.js?raw";
+import "../styles/global.css";
+
+const { title = "Disterheft", lang = "en" } = Astro.props;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+    <ConsentBanner lang={lang} />
+    <script type="module" is:inline set:html={consentManager}></script>
+  </body>
+</html>

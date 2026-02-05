@@ -1,0 +1,25 @@
+---
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+
+const { brand, nav, instagramUrl, currentPath, currentLang } = Astro.props;
+const instagramIcon = "https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_36,h_36,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/01c3aff52f2a4dffa526d7a9843d46ea.png";
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">{brand}</div>
+    <nav class="main-nav" aria-label="Website">
+      <ul>
+        {nav.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <LanguageSwitcher currentPath={currentPath} currentLang={currentLang} />
+      <a class="header-social" href={instagramUrl} target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+      <img src={instagramIcon} alt="Instagram" width="36" height="36" />
+      </a>
+    </div>
+  </div>
+  <div class="header-divider"></div>
+</header>

@@ -1,0 +1,172 @@
+---
+const { data, lang } = Astro.props;
+const heroImage = {
+  src: "https://static.wixstatic.com/media/defabc_4b2996cc39fc4bf886fbd68e8637bd97~mv2.jpg/v1/fill/w_490,h_985,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/defabc_4b2996cc39fc4bf886fbd68e8637bd97~mv2.jpg",
+  srcSet: "https://static.wixstatic.com/media/defabc_4b2996cc39fc4bf886fbd68e8637bd97~mv2.jpg/v1/fill/w_490,h_985,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/defabc_4b2996cc39fc4bf886fbd68e8637bd97~mv2.jpg 1x, https://static.wixstatic.com/media/defabc_4b2996cc39fc4bf886fbd68e8637bd97~mv2.jpg/v1/fill/w_980,h_1970,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/defabc_4b2996cc39fc4bf886fbd68e8637bd97~mv2.jpg 2x",
+  alt: ""
+};
+---
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1 class="hero-title">
+        {data.hero.titleParts.map((part, index) => (
+          part.href ? (
+            <a href={part.href} target="_blank" rel="noreferrer noopener">{part.text}</a>
+          ) : (
+            <span>{part.text}</span>
+          )
+        ))}
+      </h1>
+      <a class="button button--light" href={data.hero.buttonHref} target="_blank" rel="noreferrer noopener">{data.hero.buttonLabel}</a>
+    </div>
+    <div class="hero-image">
+      <img src={heroImage.src} srcset={heroImage.srcSet} alt={heroImage.alt} width="490" height="985" />
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="container">
+    <h2 class="section-title center">{data.about.heading}</h2>
+    <p class="lead center">
+      {data.about.leadParts.map((part) => (
+        part.href ? (
+          <a href={part.href} target="_blank" rel="noreferrer noopener">{part.text}</a>
+        ) : (
+          <span>{part.text}</span>
+        )
+      ))}
+    </p>
+    <div class="stats">
+      {data.stats.map((stat) => (
+        <div class="stat">
+          <div class="stat-pill">
+            <svg preserveAspectRatio="none" viewBox="20 49.152 160 101.695" aria-hidden="true" class="stat-pill-shape">
+              <path d="M130 150.847H70c-27.5 0-50-22.5-50-50v-1.695c0-27.5 22.5-50 50-50h60c27.5 0 50 22.5 50 50v1.695c0 27.5-22.5 50-50 50z" />
+            </svg>
+            <div class="stat-content">
+              <div class="stat-value">{stat.value}</div>
+              {stat.lines.map((line) => (
+                <div class="stat-line">{line}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section id="training" class="section training">
+  <div class="container">
+    <h2 class="section-title center">{data.training.heading}</h2>
+    <div class="card-grid">
+      {data.training.cards.map((card) => (
+        <div class="card">
+          <img class="card-image" src={card.image.src} srcset={card.image.srcSet} alt={card.image.alt} width="480" height="420" />
+          <div class="card-body">
+            <h3 class="card-title">{card.title}</h3>
+            {card.lines.map((line) => (
+              <p class="card-line">{line}</p>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="center">
+      <a class="button button--dark" href={data.training.buttonHref} target="_blank" rel="noreferrer noopener">{data.training.buttonLabel}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section audience">
+  <div class="container">
+    <h2 class="section-title center">{data.audience.heading}</h2>
+    <div class="audience-grid">
+      {data.audience.items.map((item) => (
+        <div class="audience-item">
+          <div class="audience-icon">
+            <svg preserveAspectRatio="none" viewBox="47.9 51 122.588 98.8" aria-hidden="true">
+              <path d="M169.6 52.2c-1.3-1.3-3.3-1.3-4.6 0l-18.2 18.2V54.2c0-1.8-1.5-3.2-3.2-3.2H51.1c-1.8 0-3.2 1.5-3.2 3.2v92.4c0 1.8 1.5 3.2 3.2 3.2h92.4c1.8 0 3.2-1.5 3.2-3.2v-67l22.8-22.8c1.3-1.3 1.3-3.4.1-4.6zm-29.3 91.1H54.4V57.4h85.9v19.4L100 117.1 81.1 98.4c-1.3-1.3-3.3-1.3-4.6 0s-1.3 3.3 0 4.6l21.1 21.1c.6.6 1.5 1 2.3 1s1.7-.3 2.3-1l38-38 .1 57.2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="audience-title">{item.title}</h3>
+            <p class="audience-text">{item.text}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section process">
+  <div class="container">
+    <h2 class="section-title center">{data.process.heading}</h2>
+    <div class="process-grid">
+      {data.process.steps.map((step, index) => (
+        <div class="process-step">
+          <div class="process-number">{step.number}</div>
+          <h3 class="process-title">{step.title}</h3>
+          <p class="process-text">{step.text}</p>
+        </div>
+      ))}
+      <div class="process-curve process-curve--left">
+        <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 1880 1057" aria-hidden="true">
+          <path d="M58.091 998.604c-5.857-147.23 53.029-265.22 128.647-391.24 65.561-109.273 140.996-213.326 239.13-296.363C605.934 158.638 1056.074 41.11 1296.544 59.608c119.01 9.155 232.58 33.924 345.41 71.535 29.64 9.88 162.09 73.578 179.86 73.578" fill="none" stroke="#000000" stroke-width="64" stroke-dasharray="192,64,0,0" />
+        </svg>
+      </div>
+      <div class="process-curve process-curve--right">
+        <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 1880 1057" aria-hidden="true">
+          <path d="M58.091 998.604c-5.857-147.23 53.029-265.22 128.647-391.24 65.561-109.273 140.996-213.326 239.13-296.363C605.934 158.638 1056.074 41.11 1296.544 59.608c119.01 9.155 232.58 33.924 345.41 71.535 29.64 9.88 162.09 73.578 179.86 73.578" fill="none" stroke="#000000" stroke-width="64" stroke-dasharray="192,64,0,0" />
+        </svg>
+      </div>
+    </div>
+    <div class="center">
+      <a class="button button--dark" href={data.process.buttonHref} target="_blank" rel="noreferrer noopener">{data.process.buttonLabel}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section highlight">
+  <div class="container highlight-grid">
+    <div class="highlight-image">
+      <img src={data.highlight.image.src} alt={data.highlight.image.alt} width="327" height="531" />
+    </div>
+    <div class="highlight-copy">
+      <p>{data.highlight.text}</p>
+      <div class="highlight-divider"></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section testimonials">
+  <div class="container">
+    <div class="testimonial">
+      <button class="testimonial-arrow testimonial-arrow--prev" aria-label="Prev" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41"><path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path></svg>
+      </button>
+      <div class="testimonial-content">
+        <p class="testimonial-quote">{data.testimonial.quote}</p>
+        <p class="testimonial-author">{data.testimonial.author}</p>
+        <div class="testimonial-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <button class="testimonial-arrow testimonial-arrow--next" aria-label="Next" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41"><path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="section final-cta">
+  <div class="container">
+    <h2 class="final-cta-text">{data.cta.text}</h2>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import HomePage from "../components/HomePage.astro";
+import { content, sharedLinks } from "../i18n/content.js";
+
+const data = content.ru;
+const title = "Disterheft";
+---
+<BaseLayout title={title} lang={data.lang}>
+  <SiteHeader
+    brand={data.brand}
+    nav={data.nav}
+    instagramUrl={sharedLinks.instagram}
+    currentPath={Astro.url.pathname}
+    currentLang={data.lang}
+  />
+  <main data-lang={data.lang}>
+    <HomePage data={data} lang={data.lang} />
+  </main>
+  <SiteFooter
+    impressumHref={`/${data.lang}/impressum`}
+    privacyHref={`/${data.lang}/privacy-policy`}
+    whatsappHref="tel:+49 (0) 157 51705788"
+    instagramHref={sharedLinks.instagram}
+    copyright={data.footer.copyright}
+  />
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import LegalPage from "../components/LegalPage.astro";
+import { content, sharedLinks } from "../i18n/content.js";
+import { legal } from "../i18n/legal.js";
+
+const data = content.ru;
+const title = "Impressum";
+const paragraphs = legal.impressum;
+---
+<BaseLayout title={title} lang={data.lang}>
+  <SiteHeader
+    brand={data.brand}
+    nav={data.nav}
+    instagramUrl={sharedLinks.instagram}
+    currentPath={Astro.url.pathname}
+    currentLang={data.lang}
+  />
+  <main data-lang={data.lang}>
+    <LegalPage title={title} paragraphs={paragraphs} />
+  </main>
+  <SiteFooter
+    impressumHref={`/${data.lang}/impressum`}
+    privacyHref={`/${data.lang}/privacy-policy`}
+    whatsappHref="tel:+49 (0) 157 51705788"
+    instagramHref={sharedLinks.instagram}
+    copyright={data.footer.copyright}
+  />
+</BaseLayout>

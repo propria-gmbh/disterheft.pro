@@ -1,0 +1,507 @@
+{
+  "fonts": {
+    "fontPresets": {
+      "--font_0": "normal normal normal 22px/1.41em wfont_018f00_4959e66c33994f90b325bfda265e911b,wf_4959e66c33994f90b325bfda2,orig_open_sans_bold",
+      "--font_10": "normal normal normal 14px/1.79em poppins-extralight,poppins,sans-serif",
+      "--font_1": "normal normal normal 14px/1.79em poppins-extralight,poppins,sans-serif",
+      "--font_2": "normal normal normal 28px/1.38em wfont_018f00_4959e66c33994f90b325bfda265e911b,wf_4959e66c33994f90b325bfda2,orig_open_sans_bold",
+      "--font_3": "normal normal normal 88px/1.2em wfont_018f00_4959e66c33994f90b325bfda265e911b,wf_4959e66c33994f90b325bfda2,orig_open_sans_bold",
+      "--font_4": "normal normal normal 72px/1.25em wfont_018f00_4959e66c33994f90b325bfda265e911b,wf_4959e66c33994f90b325bfda2,orig_open_sans_bold",
+      "--font_5": "normal normal normal 50px/1.34em wfont_018f00_4959e66c33994f90b325bfda265e911b,wf_4959e66c33994f90b325bfda2,orig_open_sans_bold",
+      "--font_6": "normal normal normal 40px/1.35em wfont_018f00_4959e66c33994f90b325bfda265e911b,wf_4959e66c33994f90b325bfda2,orig_open_sans_bold",
+      "--font_7": "normal normal normal 20px/1.67em wfont_c5313b_2c67b2da4ce0409186074b1dd61e04bc,wf_2c67b2da4ce0409186074b1dd,orig_open_sans_semibold",
+      "--font_8": "normal normal normal 18px/1.75em wfont_fd1497_031ea0fcd45349e88a325e7f9c228550,wf_031ea0fcd45349e88a325e7f9,orig_open_sans_regular",
+      "--font_9": "normal normal normal 15px/1.88em wfont_c5313b_0949baab90304858b76521b59c5b4aa9,wf_0949baab90304858b76521b59,orig_open_sans_light"
+    },
+    "fontFamilies": [
+      "\"Arial, Helvetica, sans-serif\",serif",
+      "'helvetica-w01-roman'",
+      "'poppins'",
+      "'poppins-extralight'",
+      "Arial,Helvetica,sans-serif",
+      "Helvetica,Arial,sans-serif",
+      "Helvetica,Arial,\u30e1\u30a4\u30ea\u30aa,meiryo,\u30d2\u30e9\u30ae\u30ce\u89d2\u30b4 pro w3,hiragino kaku gothic pro,sans-serif",
+      "helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif",
+      "wf_031ea0fcd45349e88a325e7f9",
+      "wf_0949baab90304858b76521b59",
+      "wf_2c67b2da4ce0409186074b1dd",
+      "wf_4959e66c33994f90b325bfda2",
+      "wfont_018f00_4959e66c33994f90b325bfda265e911b,wf_4959e66c33994f90b325bfda2,orig_open_sans_bold",
+      "wfont_c5313b_0949baab90304858b76521b59c5b4aa9,wf_0949baab90304858b76521b59,orig_open_sans_light",
+      "wfont_c5313b_2c67b2da4ce0409186074b1dd61e04bc,wf_2c67b2da4ce0409186074b1dd,orig_open_sans_semibold",
+      "wfont_fd1497_031ea0fcd45349e88a325e7f9c228550,wf_031ea0fcd45349e88a325e7f9,orig_open_sans_regular"
+    ],
+    "fontFaceFamilies": [
+      "helvetica-w01-roman",
+      "poppins",
+      "poppins-extralight",
+      "wf_031ea0fcd45349e88a325e7f9",
+      "wf_0949baab90304858b76521b59",
+      "wf_2c67b2da4ce0409186074b1dd",
+      "wf_4959e66c33994f90b325bfda2"
+    ]
+  },
+  "typography": {
+    "fontSizesPx": [
+      "100px",
+      "10px",
+      "12px",
+      "14px",
+      "15px",
+      "16px",
+      "18px",
+      "20px",
+      "22px",
+      "23px",
+      "24px",
+      "26px",
+      "28px",
+      "32px",
+      "40px",
+      "52px",
+      "80px"
+    ],
+    "lineHeights": [
+      "1.25em",
+      "1.2em",
+      "1.34em",
+      "1.35em",
+      "1.38em",
+      "1.3em",
+      "1.41em",
+      "1.4em",
+      "1.67em",
+      "1.75em",
+      "1.79em",
+      "1.875em",
+      "1.88em",
+      "1.8em",
+      "12px",
+      "16px",
+      "18px",
+      "24px",
+      "32px",
+      "40px"
+    ]
+  },
+  "colors": {
+    "cssVars": {
+      "--color_0": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_10": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_11": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_12": {
+        "rgb": "203,203,203",
+        "hex": "#cbcbcb"
+      },
+      "--color_13": {
+        "rgb": "150,150,150",
+        "hex": "#969696"
+      },
+      "--color_14": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_15": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_16": {
+        "rgb": "255,195,189",
+        "hex": "#ffc3bd"
+      },
+      "--color_17": {
+        "rgb": "255,134,122",
+        "hex": "#ff867a"
+      },
+      "--color_18": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_19": {
+        "rgb": "207,19,0",
+        "hex": "#cf1300"
+      },
+      "--color_1": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_20": {
+        "rgb": "104,9,0",
+        "hex": "#680900"
+      },
+      "--color_21": {
+        "rgb": "219,219,219",
+        "hex": "#dbdbdb"
+      },
+      "--color_22": {
+        "rgb": "182,182,182",
+        "hex": "#b6b6b6"
+      },
+      "--color_23": {
+        "rgb": "146,146,146",
+        "hex": "#929292"
+      },
+      "--color_24": {
+        "rgb": "109,109,109",
+        "hex": "#6d6d6d"
+      },
+      "--color_25": {
+        "rgb": "73,73,73",
+        "hex": "#494949"
+      },
+      "--color_26": {
+        "rgb": "252,252,252",
+        "hex": "#fcfcfc"
+      },
+      "--color_27": {
+        "rgb": "248,248,248",
+        "hex": "#f8f8f8"
+      },
+      "--color_28": {
+        "rgb": "186,186,186",
+        "hex": "#bababa"
+      },
+      "--color_29": {
+        "rgb": "124,124,124",
+        "hex": "#7c7c7c"
+      },
+      "--color_2": {
+        "rgb": "255,74,56",
+        "hex": "#ff4a38"
+      },
+      "--color_30": {
+        "rgb": "62,62,62",
+        "hex": "#3e3e3e"
+      },
+      "--color_31": {
+        "rgb": "255,209,204",
+        "hex": "#ffd1cc"
+      },
+      "--color_32": {
+        "rgb": "255,162,153",
+        "hex": "#ffa299"
+      },
+      "--color_33": {
+        "rgb": "255,69,51",
+        "hex": "#ff4533"
+      },
+      "--color_34": {
+        "rgb": "204,18,0",
+        "hex": "#cc1200"
+      },
+      "--color_35": {
+        "rgb": "102,9,0",
+        "hex": "#660900"
+      },
+      "--color_36": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_37": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_38": {
+        "rgb": "203,203,203",
+        "hex": "#cbcbcb"
+      },
+      "--color_39": {
+        "rgb": "150,150,150",
+        "hex": "#969696"
+      },
+      "--color_3": {
+        "rgb": "73,73,73",
+        "hex": "#494949"
+      },
+      "--color_40": {
+        "rgb": "98,98,98",
+        "hex": "#626262"
+      },
+      "--color_41": {
+        "rgb": "248,248,248",
+        "hex": "#f8f8f8"
+      },
+      "--color_42": {
+        "rgb": "73,73,73",
+        "hex": "#494949"
+      },
+      "--color_43": {
+        "rgb": "150,150,150",
+        "hex": "#969696"
+      },
+      "--color_44": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_45": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_46": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_47": {
+        "rgb": "98,98,98",
+        "hex": "#626262"
+      },
+      "--color_48": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_49": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_4": {
+        "rgb": "248,248,248",
+        "hex": "#f8f8f8"
+      },
+      "--color_50": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_51": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_52": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_53": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_54": {
+        "rgb": "150,150,150",
+        "hex": "#969696"
+      },
+      "--color_55": {
+        "rgb": "150,150,150",
+        "hex": "#969696"
+      },
+      "--color_56": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_57": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_58": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_59": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_5": {
+        "rgb": "255,162,153",
+        "hex": "#ffa299"
+      },
+      "--color_60": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_61": {
+        "rgb": "45,45,45",
+        "hex": "#2d2d2d"
+      },
+      "--color_62": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_63": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_64": {
+        "rgb": "150,150,150",
+        "hex": "#969696"
+      },
+      "--color_65": {
+        "rgb": "150,150,150",
+        "hex": "#969696"
+      },
+      "--color_6": {
+        "rgb": "255,255,255",
+        "hex": "#ffffff"
+      },
+      "--color_7": {
+        "rgb": "203,203,203",
+        "hex": "#cbcbcb"
+      },
+      "--color_8": {
+        "rgb": "150,150,150",
+        "hex": "#969696"
+      },
+      "--color_9": {
+        "rgb": "98,98,98",
+        "hex": "#626262"
+      }
+    },
+    "explicitHexColors": [
+      "#000",
+      "#000000",
+      "#024906",
+      "#033FA9",
+      "#080808",
+      "#0d4f3d",
+      "#0f2ccf",
+      "#116dff",
+      "#151414",
+      "#242323",
+      "#2f5dff",
+      "#383838",
+      "#4b916d",
+      "#4d3dd0",
+      "#5000aa",
+      "#525150",
+      "#597dff",
+      "#5E97FF",
+      "#5a48f5",
+      "#5f6360",
+      "#7200f3",
+      "#767574",
+      "#7b6df7",
+      "#8b2df5",
+      "#97c693",
+      "#9c2426",
+      "#D27575",
+      "#FFFFFF",
+      "#a59bfa",
+      "#a8a6a5",
+      "#acbeff",
+      "#ae3e09",
+      "#bde2a7",
+      "#be89f9",
+      "#d49341",
+      "#d5dfff",
+      "#d6d1fc",
+      "#d7b7fb",
+      "#daf3c0",
+      "#df3336",
+      "#e0dfdf",
+      "#e55c5e",
+      "#e7e4fe",
+      "#eaefff",
+      "#ed8f90",
+      "#eeecfe",
+      "#effae5",
+      "#f1e5fe",
+      "#f1f0ef",
+      "#f1f5ed",
+      "#f4b8b9",
+      "#f5f7ff",
+      "#f8f2ff",
+      "#f9ad4d",
+      "#f9d6d7",
+      "#fabd71",
+      "#fbcfbb",
+      "#fbe3d9",
+      "#fcd29d",
+      "#fcebeb",
+      "#fda77f",
+      "#fdead2",
+      "#fdf1ec",
+      "#fe9361",
+      "#fef3e5",
+      "#fef6ed",
+      "#ff8044",
+      "#fff"
+    ]
+  },
+  "spacingPx": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    7.5,
+    8.0,
+    10.0,
+    12.0,
+    13.0,
+    14.0,
+    15.0,
+    16.0,
+    17.0,
+    18.0,
+    20.0,
+    22.0,
+    23.0,
+    24.0,
+    25.0,
+    26.0,
+    27.0,
+    28.0,
+    29.0,
+    30.0,
+    31.0,
+    32.0,
+    33.0,
+    34.0,
+    36.0,
+    38.0,
+    39.0,
+    40.0,
+    43.0,
+    45.0,
+    47.0,
+    52.0,
+    53.0,
+    56.0,
+    57.0,
+    58.0,
+    59.0,
+    60.0,
+    65.0,
+    66.0,
+    68.0,
+    69.0,
+    70.0,
+    80.0,
+    81.0,
+    85.0,
+    88.0,
+    94.0,
+    95.0,
+    100.0,
+    102.0,
+    120.0
+  ],
+  "layout": {
+    "siteWidthDesktopPx": "980",
+    "siteWidthMobilePx": "320",
+    "columnWidthsDesktopPx": [
+      "323",
+      "327",
+      "490",
+      "653",
+      "657",
+      "980"
+    ],
+    "columnWidthsMobilePx": [
+      "320"
+    ]
+  },
+  "breakpoints": {
+    "desktopSiteWidthPx": "980",
+    "mobileSiteWidthPx": "320",
+    "notes": "Wix serves a separate mobile layout; no width-based media queries found in HTML CSS beyond prefers-reduced-motion."
+  }
+}

@@ -1,0 +1,57 @@
+---
+import { consentText } from "./consentText.js";
+
+const { lang = "en" } = Astro.props;
+const copy = consentText[lang] ?? consentText.en;
+const privacyHref = `/${lang}/privacy-policy`;
+const impressumHref = `/${lang}/impressum`;
+const moreHref = `/${lang}/privacy-policy`;
+---
+<div id="consent-banner" class="consent-banner" hidden>
+  <div class="consent-container">
+    <div class="consent-content">
+      <h2 class="consent-title">{copy.title}</h2>
+      <p class="consent-description">{copy.description}</p>
+      <div class="consent-links">
+        <a href={privacyHref}>{copy.links.privacy}</a>
+        <a href={impressumHref}>{copy.links.impressum}</a>
+        <a href={moreHref}>{copy.links.more}</a>
+      </div>
+      <div class="consent-toggles">
+        <label class="consent-toggle">
+          <span>{copy.toggles.essential}</span>
+          <span class="switch">
+            <input type="checkbox" checked disabled />
+            <span class="slider"></span>
+          </span>
+        </label>
+        <label class="consent-toggle">
+          <span>{copy.toggles.functional}</span>
+          <span class="switch">
+            <input type="checkbox" data-consent-toggle="functional" />
+            <span class="slider"></span>
+          </span>
+        </label>
+        <label class="consent-toggle">
+          <span>{copy.toggles.analytics}</span>
+          <span class="switch">
+            <input type="checkbox" data-consent-toggle="analytics" />
+            <span class="slider"></span>
+          </span>
+        </label>
+        <label class="consent-toggle">
+          <span>{copy.toggles.marketing}</span>
+          <span class="switch">
+            <input type="checkbox" data-consent-toggle="marketing" />
+            <span class="slider"></span>
+          </span>
+        </label>
+      </div>
+    </div>
+    <div class="consent-actions">
+      <button type="button" data-consent-action="save">{copy.buttons.save}</button>
+      <button type="button" data-consent-action="reject">{copy.buttons.reject}</button>
+      <button type="button" data-consent-action="accept">{copy.buttons.accept}</button>
+    </div>
+  </div>
+</div>
