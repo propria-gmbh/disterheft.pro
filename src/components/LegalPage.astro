@@ -1,0 +1,11 @@
+---
+const { title, paragraphs } = Astro.props;
+---
+<section class="section legal">
+  <div class="container legal-container">
+    <h1 class="legal-title">{title}</h1>
+    {paragraphs.map((text) => (
+      <p class="legal-paragraph">{text}</p>
+    ))}
+  </div>
+</section>

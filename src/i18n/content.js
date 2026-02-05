@@ -13,10 +13,10 @@ export const content = {
     lang: "ru",
     brand: "Anna Disterheft",
     nav: [
-      { label: "Обо мне", href: "#about" },
-      { label: "Тренировки", href: "#training" },
-      { label: "Контакт", href: "#contact" },
-      { label: "Отзывы", href: "#reviews" }
+      { label: "Обо мне", href: "/ru#about" },
+      { label: "Тренировки", href: "/ru#training" },
+      { label: "Контакт", href: "/ru#contact" },
+      { label: "Отзывы", href: "/ru#reviews" }
     ],
     hero: {
       titleParts: [
@@ -145,10 +145,10 @@ export const content = {
     lang: "de",
     brand: "Anna Disterheft",
     nav: [
-      { label: "Обо мне", href: "#about" },
-      { label: "Тренировки", href: "#training" },
-      { label: "Контакт", href: "#contact" },
-      { label: "Отзывы", href: "#reviews" },
+      { label: "Обо мне", href: "/de#about" },
+      { label: "Тренировки", href: "/de#training" },
+      { label: "Контакт", href: "/de#contact" },
+      { label: "Отзывы", href: "/de#reviews" },
       { label: "Новая страница", href: "/de/datenschutzerklaerung" }
     ],
     hero: {
@@ -279,10 +279,10 @@ export const content = {
     lang: "en",
     brand: "Anna Disterheft",
     nav: [
-      { label: "Обо мне", href: "#about" },
-      { label: "Тренировки", href: "#training" },
-      { label: "Контакт", href: "#contact" },
-      { label: "Отзывы", href: "#reviews" },
+      { label: "Обо мне", href: "/en#about" },
+      { label: "Тренировки", href: "/en#training" },
+      { label: "Контакт", href: "/en#contact" },
+      { label: "Отзывы", href: "/en#reviews" },
       { label: "Новая страница", href: "/en/datenschutzerklaerung" }
     ],
     hero: {

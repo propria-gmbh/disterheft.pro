@@ -1,12 +1,14 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import SiteHeader from "../components/SiteHeader.astro";
-import SiteFooter from "../components/SiteFooter.astro";
-import HomePage from "../components/HomePage.astro";
-import { content, sharedLinks } from "../i18n/content.js";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import LegalPage from "../../components/LegalPage.astro";
+import { content, sharedLinks } from "../../i18n/content.js";
+import { legal } from "../../i18n/legal.js";
 
-const data = content.ru;
-const title = "Disterheft";
+const data = content.en;
+const title = "Impressum";
+const paragraphs = legal.impressum;
 ---
 <BaseLayout title={title} lang={data.lang}>
   <SiteHeader
@@ -17,7 +19,7 @@ const title = "Disterheft";
     currentLang={data.lang}
   />
   <main data-lang={data.lang}>
-    <HomePage data={data} lang={data.lang} />
+    <LegalPage title={title} paragraphs={paragraphs} />
   </main>
   <SiteFooter
     impressumHref={`/${data.lang}/impressum`}

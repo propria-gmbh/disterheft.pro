@@ -1,4 +1,6 @@
 ---
+import ConsentBanner from "../consent/ConsentBanner.astro";
+
 const { title = "Disterheft", lang = "en" } = Astro.props;
 ---
 <!doctype html>
@@ -17,5 +19,7 @@ const { title = "Disterheft", lang = "en" } = Astro.props;
   </head>
   <body>
     <slot />
+    <ConsentBanner lang={lang} />
+    <script type="module" src={Astro.resolve("../consent/consentManager.js")}></script>
   </body>
 </html>
