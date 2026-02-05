@@ -21,6 +21,6 @@ const { title = "Disterheft", lang = "en" } = Astro.props;
   <body>
     <slot />
     <ConsentBanner lang={lang} />
-    <script type="module" is:inline>{consentManager}</script>
+    <script type="module" is:inline set:html={consentManager}></script>
   </body>
 </html>
