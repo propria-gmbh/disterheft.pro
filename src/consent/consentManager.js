@@ -1,4 +1,43 @@
-import { defaultConsent, readConsent, writeConsent, normalizeConsent } from "./consentState.js";
+const CONSENT_STORAGE_KEY = "disterheft_consent";
+
+const defaultConsent = {
+  essential: true,
+  functional: false,
+  analytics: false,
+  marketing: false
+};
+
+const normalizeConsent = (input) => {
+  if (!input || typeof input !== "object") {
+    return { ...defaultConsent };
+  }
+  return {
+    essential: true,
+    functional: Boolean(input.functional),
+    analytics: Boolean(input.analytics),
+    marketing: Boolean(input.marketing)
+  };
+};
+
+const readConsent = () => {
+  try {
+    const stored = window.localStorage.getItem(CONSENT_STORAGE_KEY);
+    if (!stored) {
+      return null;
+    }
+    return normalizeConsent(JSON.parse(stored));
+  } catch (error) {
+    return null;
+  }
+};
+
+const writeConsent = (state) => {
+  try {
+    window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(state));
+  } catch (error) {
+    // Ignore storage errors.
+  }
+};
 
 const banner = document.getElementById("consent-banner");
 
