@@ -58,6 +58,33 @@
 9) Публикация в магазин через GraphQL API
 10) Пост-проверка и логирование результата (draft + published)
 
+### 4.3 ASCII структура
+```
+[Competitor Data]
+        |
+        v
+[Ingestion] -> [Normalization] -> [Product Model]
+        |                           |
+        |                           +--> [Text Generation]
+        |                                    |
+        |                                    v
+        |                              [GMC Validation]
+        |
+        +--> [Image Generation] -> [WebP Conversion]
+                        |
+                        v
+                  [Media Storage]
+        |
+        v
+[Shopify Taxonomy] -> [Payload Builder] -> [GraphQL API]
+                                            |
+                                            v
+                                    [Draft / Published Check]
+                                            |
+                                            v
+                                         [Logging]
+```
+
 ## 5. Этапы реализации
 
 ### Этап 1. Модель данных и ingestion
