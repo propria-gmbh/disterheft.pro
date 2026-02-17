@@ -1,5 +1,3 @@
-import { retreatRu } from "./retreatRu.js";
-
 export const languages = ["ru", "de", "en"];
 export const defaultLanguage = "ru";
 
@@ -17,7 +15,6 @@ export const content = {
     nav: [
       { label: "Обо мне", href: "/ru#about" },
       { label: "Тренировки", href: "/ru#training" },
-      { label: "Ретрит", href: "/ru#retreat" },
       { label: "Контакт", href: "/ru#contact" },
       { label: "Отзывы", href: "/ru#reviews" }
     ],
@@ -104,7 +101,6 @@ export const content = {
         }
       ]
     },
-    retreat: retreatRu,
     process: {
       heading: "Как это работает?",
       steps: [
